@@ -1,0 +1,6 @@
+@RaptoAPI_HostAddress = http://localhost:5137
+
+GET {{RaptoAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
