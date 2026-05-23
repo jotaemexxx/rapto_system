@@ -1,0 +1,79 @@
+.cadastros { display: flex; flex-direction: column; gap: 1rem; height: 100%; }
+
+.cadastros-toolbar { display: flex; gap: 1rem; align-items: center; }
+
+.cadastros-busca {
+  flex: 1;
+  background: var(--preto-card);
+  border: 1px solid var(--preto-borda);
+  border-radius: 10px;
+  padding: 0.65rem 1rem;
+  color: var(--branco);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.85rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+.cadastros-busca::placeholder { color: var(--cinza); }
+.cadastros-busca:focus { border-color: var(--azul); }
+
+.btn-novo-cadastro {
+  padding: 0.65rem 1.5rem;
+  background: var(--azul);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 0.95rem;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+  transition: background 0.2s;
+  white-space: nowrap;
+}
+.btn-novo-cadastro:hover { background: var(--azul-escuro); }
+
+.cadastros-tabela-wrapper {
+  background: var(--preto-card);
+  border: 1px solid var(--preto-borda);
+  border-radius: 14px;
+  overflow: auto;
+  flex: 1;
+}
+
+.cadastros-tabela { width: 100%; border-collapse: collapse; font-size: 0.83rem; }
+
+.cadastros-tabela th {
+  text-align: left;
+  padding: 0.75rem 1rem;
+  color: var(--cinza);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-bottom: 1px solid var(--preto-borda);
+  font-weight: 500;
+  background: var(--preto-card);
+  position: sticky;
+  top: 0;
+}
+
+.cadastros-tabela td {
+  padding: 0.75rem 1rem;
+  color: var(--branco);
+  border-bottom: 1px solid var(--preto-borda);
+}
+
+.cadastros-tabela tr:last-child td { border-bottom: none; }
+.cadastros-tabela tr:hover td { background: var(--preto); }
+
+.cad-id { color: var(--cinza); font-size: 0.78rem; }
+.cad-nome { font-weight: 500; }
+.cad-cnpj { font-size: 0.78rem; color: var(--cinza); font-family: monospace; }
+
+.cad-tipo {
+  font-size: 0.7rem;
+  background: var(--azul-glow);
+  color: var(--azul);
+  border-radius: 999px;
+  padding: 2px 10px;
+  font-weight: 600;
+}

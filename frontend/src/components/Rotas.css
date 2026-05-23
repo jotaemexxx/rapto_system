@@ -1,0 +1,155 @@
+.rotas { height: 100%; display: flex; flex-direction: column; }
+
+.rotas-corpo {
+  display: flex;
+  flex: 1;
+  gap: 1rem;
+  overflow: hidden;
+  height: calc(100vh - 120px);
+}
+
+.rotas-lista-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: var(--preto-card);
+  border: 1px solid var(--preto-borda);
+  border-radius: 14px;
+}
+
+.rotas-busca-wrapper { padding: 1rem 1rem 0.5rem; }
+
+.rotas-busca {
+  width: 100%;
+  background: var(--preto);
+  border: 1px solid var(--preto-borda);
+  border-radius: 10px;
+  padding: 0.65rem 1rem;
+  color: var(--branco);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.85rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+.rotas-busca::placeholder { color: var(--cinza); }
+.rotas-busca:focus { border-color: var(--azul); }
+
+.rotas-lista {
+  flex: 1;
+  overflow-y: auto;
+  padding: 0.5rem 1rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.rotas-card {
+  background: var(--preto);
+  border: 1px solid var(--preto-borda);
+  border-radius: 10px;
+  padding: 0.85rem 1rem;
+  cursor: pointer;
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
+  transition: border-color 0.2s, background 0.2s;
+}
+.rotas-card:hover { border-color: var(--azul); background: #0057FF08; }
+.rotas-card.selecionado { border-color: var(--azul); background: var(--azul-glow); }
+
+.rcard-check {
+  width: 22px; height: 22px;
+  border-radius: 6px;
+  border: 2px solid var(--preto-borda);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.7rem; color: white; font-weight: 700;
+  flex-shrink: 0; margin-top: 2px;
+  transition: background 0.2s, border-color 0.2s;
+}
+.selecionado .rcard-check { background: var(--azul); border-color: var(--azul); }
+
+.rcard-info { display: flex; flex-direction: column; gap: 3px; flex: 1; min-width: 0; }
+.rcard-top { display: flex; justify-content: space-between; }
+.rcard-codigo { font-size: 0.68rem; color: var(--azul); background: var(--azul-glow); border-radius: 4px; padding: 1px 6px; font-weight: 600; }
+.rcard-peso { font-size: 0.72rem; color: var(--cinza); }
+.rcard-destinatario { font-size: 0.88rem; font-weight: 600; color: var(--branco); }
+.rcard-endereco { font-size: 0.72rem; color: var(--cinza); }
+
+/* Painel */
+.rotas-painel {
+  width: 280px;
+  flex-shrink: 0;
+  background: var(--preto-card);
+  border: 1px solid var(--preto-borda);
+  border-radius: 14px;
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  overflow-y: auto;
+}
+
+.rpainel-titulo { font-family: 'Bebas Neue', sans-serif; font-size: 1rem; letter-spacing: 0.08em; color: var(--branco); }
+
+.rpainel-stats {
+  display: flex; align-items: center; gap: 1rem;
+  background: var(--preto); border: 1px solid var(--preto-borda);
+  border-radius: 10px; padding: 0.75rem 1rem;
+}
+.rpainel-stat { display: flex; flex-direction: column; align-items: center; gap: 2px; flex: 1; }
+.rstat-valor { font-family: 'Bebas Neue', sans-serif; font-size: 1.6rem; color: var(--azul); line-height: 1; }
+.rstat-label { font-size: 0.68rem; color: var(--cinza); }
+.rpainel-divider { width: 1px; height: 32px; background: var(--preto-borda); }
+
+.rpainel-lista { list-style: none; display: flex; flex-direction: column; gap: 0.4rem; max-height: 280px; overflow-y: auto; }
+
+.rpainel-item {
+  display: flex; align-items: center; gap: 0.5rem;
+  background: var(--preto); border: 1px solid var(--preto-borda);
+  border-radius: 8px; padding: 0.5rem 0.75rem;
+}
+.rpainel-item-info { display: flex; flex-direction: column; gap: 1px; flex: 1; min-width: 0; }
+.rpainel-codigo { font-size: 0.62rem; color: var(--azul); font-weight: 600; }
+.rpainel-cliente { font-size: 0.78rem; color: var(--branco); font-weight: 500; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.rpainel-end { font-size: 0.65rem; color: var(--cinza); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+.rpainel-remover { background: none; border: none; color: var(--cinza); cursor: pointer; font-size: 0.7rem; padding: 2px 4px; border-radius: 4px; transition: color 0.2s; flex-shrink: 0; }
+.rpainel-remover:hover { color: var(--perigo); }
+
+.rotas-erro { background: #FF3B3B15; border: 1px solid var(--perigo); border-radius: 8px; padding: 0.6rem 0.9rem; font-size: 0.78rem; color: var(--perigo); }
+
+.rpainel-aviso { font-size: 0.75rem; color: var(--cinza); text-align: center; line-height: 1.5; }
+
+.btn-calcular {
+  width: 100%; padding: 0.85rem;
+  background: var(--azul); color: white; border: none; border-radius: 10px;
+  font-family: 'Bebas Neue', sans-serif; font-size: 1rem; letter-spacing: 0.1em;
+  cursor: pointer; transition: background 0.2s, box-shadow 0.2s;
+  margin-top: auto; display: flex; align-items: center; justify-content: center; min-height: 44px;
+}
+.btn-calcular:hover:not(:disabled) { background: var(--azul-escuro); box-shadow: 0 0 20px var(--azul-glow); }
+.btn-calcular:disabled { opacity: 0.4; cursor: not-allowed; }
+
+.btn-spinner { width: 16px; height: 16px; border: 2px solid rgba(255,255,255,0.3); border-top-color: white; border-radius: 50%; animation: spin 0.7s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* Mapa */
+.rotas-mapa-wrapper { display: flex; flex-direction: column; height: calc(100vh - 120px); }
+
+.rotas-mapa-topbar {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0.75rem 0; margin-bottom: 0.75rem;
+}
+
+.btn-voltar-selecao {
+  background: var(--preto-card); border: 1px solid var(--preto-borda);
+  color: var(--cinza); padding: 0.5rem 1rem; border-radius: 8px;
+  font-size: 0.82rem; cursor: pointer; transition: color 0.2s, border-color 0.2s;
+}
+.btn-voltar-selecao:hover { color: var(--branco); border-color: var(--azul); }
+
+.rotas-mapa-info { display: flex; flex-direction: column; align-items: flex-end; gap: 2px; }
+.rotas-dist { font-size: 0.85rem; color: var(--branco); }
+.rotas-dist strong { color: var(--sucesso); }
+.rotas-pacotes { font-size: 0.72rem; color: var(--cinza); }

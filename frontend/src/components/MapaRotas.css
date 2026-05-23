@@ -1,0 +1,27 @@
+.mapa-rotas-container { position: relative; flex: 1; border-radius: 14px; overflow: hidden; }
+.mapa-rotas-leaflet { width: 100%; height: 100%; }
+
+.mapa-rotas-loading {
+  position: absolute; top: 1rem; left: 50%; transform: translateX(-50%);
+  z-index: 1000; background: rgba(8,12,18,0.9); border: 1px solid var(--azul);
+  border-radius: 999px; padding: 0.4rem 1.2rem; font-size: 0.78rem; color: var(--azul);
+  backdrop-filter: blur(8px); white-space: nowrap;
+  animation: piscar 1.2s ease-in-out infinite;
+}
+@keyframes piscar { 0%,100%{opacity:1} 50%{opacity:0.5} }
+
+.marker-sede {
+  width: 32px; height: 32px; background: var(--navy);
+  border-radius: 50%; display: flex; align-items: center; justify-content: center;
+  font-size: 0.75rem; font-weight: 700; color: white;
+  border: 2px solid white; box-shadow: 0 0 12px rgba(27,46,75,0.8);
+  font-family: 'Bebas Neue', sans-serif; letter-spacing: 0.05em;
+}
+
+.marker-entrega {
+  width: 26px; height: 26px; background: var(--preto-card);
+  border: 2px solid var(--azul); border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.68rem; font-weight: 600; color: var(--branco);
+  font-family: 'DM Sans', sans-serif; box-shadow: 0 0 8px var(--azul-glow);
+}

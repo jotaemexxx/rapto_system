@@ -1,0 +1,96 @@
+.fiscal { display: flex; flex-direction: column; gap: 1.25rem; }
+
+.fiscal-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.fiscal-card {
+  background: var(--preto-card);
+  border: 1px solid var(--preto-borda);
+  border-radius: 14px;
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.fiscal-card-label { font-size: 0.75rem; color: var(--cinza); text-transform: uppercase; letter-spacing: 0.05em; }
+
+.fiscal-card-valor {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.8rem;
+  color: var(--branco);
+  line-height: 1;
+}
+
+.fiscal-card-valor--aviso  { color: var(--aviso); }
+.fiscal-card-valor--perigo { color: var(--perigo); }
+.fiscal-card-sub { font-size: 0.7rem; color: var(--cinza); }
+
+.fiscal-tabela-wrapper {
+  background: var(--preto-card);
+  border: 1px solid var(--preto-borda);
+  border-radius: 14px;
+  overflow: auto;
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.fiscal-tabela-header { display: flex; justify-content: space-between; align-items: center; }
+
+.fiscal-titulo {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1rem;
+  letter-spacing: 0.08em;
+  color: var(--branco);
+}
+
+.btn-emitir {
+  padding: 0.5rem 1.25rem;
+  background: var(--azul);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 0.9rem;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.btn-emitir:hover { background: var(--azul-escuro); }
+
+.fiscal-tabela { width: 100%; border-collapse: collapse; font-size: 0.83rem; }
+
+.fiscal-tabela th {
+  text-align: left;
+  padding: 0.6rem 0.75rem;
+  color: var(--cinza);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-bottom: 1px solid var(--preto-borda);
+  font-weight: 500;
+}
+
+.fiscal-tabela td {
+  padding: 0.7rem 0.75rem;
+  color: var(--branco);
+  border-bottom: 1px solid var(--preto-borda);
+}
+
+.fiscal-tabela tr:last-child td { border-bottom: none; }
+.fiscal-tabela tr:hover td { background: var(--preto); }
+
+.nf-numero { font-size: 0.72rem; color: var(--azul); background: var(--azul-glow); border-radius: 4px; padding: 2px 8px; font-weight: 600; }
+.nf-emitente { font-weight: 500; }
+.nf-valor { color: var(--sucesso); font-weight: 600; }
+.nf-data { color: var(--cinza); font-size: 0.78rem; }
+
+.nf-status { font-size: 0.72rem; border-radius: 999px; padding: 3px 10px; font-weight: 600; }
+.status--sucesso { background: #00E09618; color: var(--sucesso); }
+.status--aviso   { background: #FFB80018; color: var(--aviso); }
+.status--perigo  { background: #FF3B3B15; color: var(--perigo); }

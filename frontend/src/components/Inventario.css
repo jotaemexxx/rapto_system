@@ -1,0 +1,103 @@
+.inventario { display: flex; flex-direction: column; gap: 1rem; height: 100%; }
+
+.inventario-toolbar {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.inventario-busca {
+  flex: 1;
+  background: var(--preto-card);
+  border: 1px solid var(--preto-borda);
+  border-radius: 10px;
+  padding: 0.65rem 1rem;
+  color: var(--branco);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.85rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.inventario-busca::placeholder { color: var(--cinza); }
+.inventario-busca:focus { border-color: var(--azul); }
+
+.btn-nova-rota {
+  padding: 0.65rem 1.5rem;
+  background: var(--azul);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 0.95rem;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+  transition: background 0.2s;
+  white-space: nowrap;
+}
+
+.btn-nova-rota:hover { background: var(--azul-escuro); }
+
+.inventario-tabela-wrapper {
+  background: var(--preto-card);
+  border: 1px solid var(--preto-borda);
+  border-radius: 14px;
+  overflow: auto;
+  flex: 1;
+}
+
+.inventario-tabela {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.83rem;
+}
+
+.inventario-tabela th {
+  text-align: left;
+  padding: 0.75rem 1rem;
+  color: var(--cinza);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-bottom: 1px solid var(--preto-borda);
+  font-weight: 500;
+  background: var(--preto-card);
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.inventario-tabela td {
+  padding: 0.75rem 1rem;
+  color: var(--branco);
+  border-bottom: 1px solid var(--preto-borda);
+  vertical-align: middle;
+}
+
+.inventario-tabela tr:last-child td { border-bottom: none; }
+.inventario-tabela tr:hover td { background: var(--preto); }
+
+.inv-codigo {
+  font-size: 0.72rem;
+  color: var(--azul);
+  background: var(--azul-glow);
+  border-radius: 4px;
+  padding: 2px 8px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.inv-destinatario { font-weight: 500; }
+.inv-endereco { color: var(--cinza); font-size: 0.78rem; }
+
+.inv-status {
+  font-size: 0.72rem;
+  border-radius: 999px;
+  padding: 3px 10px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.status--sucesso { background: #00E09618; color: var(--sucesso); }
+.status--azul    { background: var(--azul-glow); color: var(--azul); }
+.status--aviso   { background: #FFB80018; color: var(--aviso); }

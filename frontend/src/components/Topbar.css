@@ -1,0 +1,102 @@
+.topbar {
+  height: 60px;
+  background: var(--preto-card);
+  border-bottom: 1px solid var(--preto-borda);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  flex-shrink: 0;
+}
+
+.topbar-titulo {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.3rem;
+  letter-spacing: 0.08em;
+  color: var(--branco);
+}
+
+.topbar-direita {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.topbar-notif {
+  position: relative;
+  font-size: 1.1rem;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.notif-badge {
+  position: absolute;
+  top: -2px;
+  right: -4px;
+  background: var(--perigo);
+  color: white;
+  font-size: 0.55rem;
+  font-weight: 700;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.topbar-usuario {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: var(--preto);
+  border: 1px solid var(--preto-borda);
+  border-radius: 10px;
+  padding: 0.4rem 0.75rem;
+}
+
+.usuario-avatar {
+  width: 30px;
+  height: 30px;
+  background: var(--azul);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: white;
+  font-family: 'Bebas Neue', sans-serif;
+}
+
+.usuario-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.usuario-nome {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--branco);
+}
+
+.usuario-cargo {
+  font-size: 0.65rem;
+  color: var(--cinza);
+}
+
+.btn-logout {
+  background: none;
+  border: none;
+  color: var(--cinza);
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 2px 4px;
+  border-radius: 4px;
+  transition: color 0.2s;
+  margin-left: 4px;
+}
+
+.btn-logout:hover { color: var(--perigo); }

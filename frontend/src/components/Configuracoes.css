@@ -1,0 +1,27 @@
+.config { display: flex; flex-direction: column; gap: 1.5rem; max-width: 700px; }
+
+.config-secao { display: flex; flex-direction: column; gap: 0.75rem; }
+
+.config-titulo {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1rem; letter-spacing: 0.08em; color: var(--cinza);
+  text-transform: uppercase;
+}
+
+.config-card {
+  background: var(--preto-card);
+  border: 1px solid var(--preto-borda);
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.config-row {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 0.85rem 1.25rem;
+  border-bottom: 1px solid var(--preto-borda);
+}
+.config-row:last-child { border-bottom: none; }
+
+.config-label { font-size: 0.83rem; color: var(--cinza); }
+.config-valor { font-size: 0.83rem; color: var(--branco); font-weight: 500; }
+.config-ok { color: var(--sucesso); }
