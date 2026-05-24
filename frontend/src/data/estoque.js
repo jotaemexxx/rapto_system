@@ -28,8 +28,8 @@ export const ESTOQUE = [
     endereco: "Rua Industrial, 890 - Distrito Industrial",
     bairro: "Industrial",
     peso: 80,
-    latitude: -8.7820,
-    longitude: -63.8650,
+    latitude: -8.7755,
+    longitude: -63.8920,
     status: "aguardando",
   },
   {
@@ -50,8 +50,8 @@ export const ESTOQUE = [
     endereco: "Rua Cascalheira, 210 - Cascalheira",
     bairro: "Cascalheira",
     peso: 40,
-    latitude: -8.7710,
-    longitude: -63.8820,
+    latitude: -8.7680,
+    longitude: -63.8855,
     status: "aguardando",
   },
   {
