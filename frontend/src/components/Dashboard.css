@@ -138,3 +138,6 @@
 .resumo-barra--aviso { background: var(--aviso); }
 
 .resumo-valor { font-size: 0.78rem; color: var(--branco); font-weight: 600; text-align: right; }
+
+.dash-row { cursor: pointer; }
+.dash-row:hover td { background: var(--preto) !important; }

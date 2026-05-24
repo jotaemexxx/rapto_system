@@ -101,3 +101,6 @@
 .status--sucesso { background: #00E09618; color: var(--sucesso); }
 .status--azul    { background: var(--azul-glow); color: var(--azul); }
 .status--aviso   { background: #FFB80018; color: var(--aviso); }
+
+.inv-row { cursor: pointer; }
+.inv-row:hover td { background: var(--preto) !important; }

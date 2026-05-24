@@ -94,3 +94,6 @@
 .status--sucesso { background: #00E09618; color: var(--sucesso); }
 .status--aviso   { background: #FFB80018; color: var(--aviso); }
 .status--perigo  { background: #FF3B3B15; color: var(--perigo); }
+
+.nf-row { cursor: pointer; }
+.nf-row:hover td { background: var(--preto) !important; }

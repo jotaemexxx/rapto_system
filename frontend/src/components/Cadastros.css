@@ -77,3 +77,6 @@
   padding: 2px 10px;
   font-weight: 600;
 }
+
+.cad-row { cursor: pointer; transition: background 0.15s; }
+.cad-row:hover td { background: var(--preto) !important; }
